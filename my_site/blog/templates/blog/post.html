@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block css_files %}
+
+<link rel="stylesheet" href="{% static 'blog/post.css' %}">
+
+{% endblock %}
+
+{% block content %}
+{% for article in loaded_article %}
+<div class="row">
+
+<div id="article_main" class="col col-12 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+    <div id='title_box'>
+        <h1>{{ article.title|title }}</h1>
+    </div>
+    <div id="author_box">
+        <p>{{ article.author.name }}</p>
+    </div>
+    <div id='image_box'>
+    <img src="{% static 'blog/image1.jpg' %}">
+</div>
+
+<div id='article_content'>
+<p>{{ article.content }}
+</p>
+</div>
+</div>
+<div id="sidebar" class="col col-12 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+    <div id="sidebar_item_1">
+        <strong>
+        <i class="fas fa-podcast"></i>
+        <span id="sidebar1_time">20:00</span>
+    </strong>
+        <span id="sidebar1_day">Every Monday</span>
+    
+        <span id="sidebar1_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae porro, natus eum doloremque, magnam culpa in.</span>
+        <button id="sidebar1_button" type="button" class="btn btn-outline-danger" >
+        <a href="#">Join Now</a>
+    </button>
+    </div>
+</div>
+</div>
+
+{% endfor %}
+{% endblock content %}

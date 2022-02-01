@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block css_files %}
+
+<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+    
+
+    <ul class="row" id="posts_ul">
+{% for article in article_objects %}
+
+
+    <li id="post_outer" class="col col-12 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+    <div id="post_inner">
+        <div id="post_image" >
+            <a href="{% url 'post-page' article.slug %}"><img src="{{ article.image.url }}"></a>
+        </div>
+        <div id="post_without_image">
+        <div id="post_title">
+        <a href="{% url 'post-page' article.slug %}">{{ article.title|title }}</a></div>
+        
+        <div id="post_summary">
+            <p>{{ article.content|make_list|slice:':75'|join:'' }}...</p> 
+            <!-- print first 45 caracters -->
+        </div>
+
+        <div id="post_author">
+            <a href="mailto:{{ article.author.email }}">By: {{ article.author.name }}</a>
+        </div>
+    </div>
+    </div>
+</li>
+
+{% endfor %}
+</ul>
+
+
+
+{% endblock content %}

@@ -1,0 +1,45 @@
+#image_box{
+    }
+    
+#title_box h1{
+        font-size: 40px;
+        margin-top: 13px;
+    }
+
+#author_box p{
+    font-size: 15px;
+    color: #dc3545;
+}
+#image_box img{
+    width: 100%;
+    margin-bottom: 10px;
+    float: right;
+    }
+
+    
+#sidebar {
+    margin-top: 20px;}
+#sidebar_item_1 {
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px #a9a9a945;
+    background-color: #fff;
+    padding: 20px;
+}
+#sidebar_item_1 strong{
+    font-size: 30px;
+}
+#sidebar1_time{
+
+}
+#sidebar1_day{
+    display: block;
+    font-size: 14px;
+    margin-top: -7px;
+}
+#sidebar1_text{
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+}
