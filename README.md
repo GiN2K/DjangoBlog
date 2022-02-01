@@ -14,3 +14,5 @@ Basic blog built using Django.
 - File upload for article images
 - Comment section for each article
 - Fully responsive thanks to bootstrap
+
+**[Live Demo](http://amineaa.com/) - [Source Code](https://github.com/GiN2K/)**
