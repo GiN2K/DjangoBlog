@@ -17,14 +17,22 @@
         <h1>{{ article.title|title }}</h1>
     </div>
     <div id="author_box">
-        <p>{{ article.author.name }}</p>
+        <a href="mailto:{{ article.author.email }}">
+        <p>{{ article.author.name }}</p></a>
     </div>
     <div id='image_box'>
-    <img src="{% static 'blog/image1.jpg' %}">
+    <img src="{{ article.image.url }}">
 </div>
 
 <div id='article_content'>
-<p>{{ article.content }}
+<p>{{ article.content|linebreaks }}
+</p>
+</div>
+<div id="article_tags">
+    <p>Tags:
+    {% for loaded_article_tag in loaded_article_tags %}
+    <span>{{ loaded_article_tag }}, </span>
+    {% endfor %}
 </p>
 </div>
 </div>
@@ -40,6 +48,11 @@
         <button id="sidebar1_button" type="button" class="btn btn-outline-danger" >
         <a href="#">Join Now</a>
     </button>
+    </div>
+    <div id="sidebar_item_2">
+        <h3>Video Example</h3>
+        <div class="heading-underline"></div>
+        <iframe src="https://www.youtube.com/embed/Db7xzarI3B8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
 </div>

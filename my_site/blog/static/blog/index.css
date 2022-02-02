@@ -7,14 +7,16 @@
     margin-bottom: 15px;
     margin-top: 15px;
     padding: 0;
-    margin-left: 13px;
+    margin-left: 7px;
+    margin-right: 6px;
 }
 
 #post_title{
     margin-bottom: 8px;
 }
 #posts_ul{
-    padding: 0px 13px 0px 0px;
+    padding: 0;
+    margin: 0;
 }
 #post_title a{
     font-size: 25px;

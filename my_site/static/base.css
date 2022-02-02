@@ -1,3 +1,6 @@
+a {
+    text-decoration: none!important;
+}
 body {
     font-family: 'Roboto', sans-serif;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAT/GdHE/gP5jMiCYAGQIpggXAAmiCIAEgQAAE4FBbECyZcAAAAASUVORK5CYII=) #222;}
@@ -18,6 +21,8 @@ body {
 
 .navbar-light .navbar-nav .nav-link {
     color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
 .navbar-nav {
